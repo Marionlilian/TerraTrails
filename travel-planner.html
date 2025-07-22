@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel_planner</title>
+     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playwrite+VN+Guides&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=award_star" />
+     <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f8f8f8;
+      padding: 30px;
+    }
+
+    .form-container {
+      background: #fff;
+      padding: 30px;
+      max-width: 800px;
+      margin: auto;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 10px;
+    }
+
+    p.description {
+      text-align: center;
+      margin-bottom: 30px;
+      color: #666;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    label {
+      font-weight: bold;
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    textarea,
+    select {
+      width: 100%;
+      padding: 10px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+
+    .checkbox-group,
+    .radio-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .checkbox-group label,
+    .radio-group label {
+      font-weight: normal;
+    }
+
+    .two-col {
+      display: flex;
+      gap: 20px;
+    }
+
+    .two-col input {
+      flex: 1;
+    }
+
+    textarea {
+      resize: vertical;
+    }
+
+    button {
+      background-color: #000;
+      color: #fff;
+      padding: 14px 24px;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #444;
+    }
+  </style>
+</head>
+<body>
+    
+  <div class="form-container">
+    <h2>Unlock Trip Planning Spot</h2>
+    <p class="description">Ready to work 1-on-1 with us? Fill out this form and we will contact you right away!</p>
+
+    <form action="#" method="POST">
+      <div class="form-group">
+        <label>Name *</label>
+        <div class="two-col">
+          <input type="text" name="first_name" placeholder="First Name" required>
+          <input type="text" name="last_name" placeholder="Last Name" required>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="email">Email *</label>
+        <input type="email" name="email" id="email" required>
+      </div>
+      <div class="form-group">
+        <label for="phone">Cell phone number *</label>
+        <input type="tel" name="phone" id="phone" required placeholder="Include country code">
+      </div>
+      <div class="form-group">
+        <label for="instagram">Instagram handle</label>
+        <input type="text" name="instagram" id="instagram" placeholder="@yourhandle">
+      </div>
+      <div class="form-group">
+        <label for="airport">Preferred departure airport(s) *</label>
+        <input type="text" name="airport" id="airport" required>
+      </div>
+      <div class="form-group">
+        <label for="travelers">How many people are traveling? *</label>
+        <select name="travelers" id="travelers" required>
+          <option value="">Select</option>
+          <option>1</option><option>2</option><option>3</option><option>4</option>
+          <option>5</option><option>6</option><option>7</option><option>8</option>
+          <option>9</option><option>10 or more</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>When can you travel?</label>
+        <div class="two-col">
+         Departure Date:<input type="date" name="departure_date" placeholder="Departure Date" required>
+          Return Date:<input type="date" name="return_date" placeholder="Return Date" required>
+        </div>
+      </div>
+      <div class="form-group">
+        <label>Desired trip length? * (Check up to 3)</label>
+        <div class="checkbox-group">
+          <label><input type="checkbox" name="length[]" value="1-2 nights"> 1–2 nights</label>
+          <label><input type="checkbox" name="length[]" value="3-4 nights"> 3–4 nights</label>
+          <label><input type="checkbox" name="length[]" value="5-6 nights"> 5–6 nights</label>
+          <label><input type="checkbox" name="length[]" value="7-8 nights"> 7–8 nights</label>
+          <label><input type="checkbox" name="length[]" value="9-10 nights"> 9–10 nights</label>
+          <label><input type="checkbox" name="length[]" value="11-12 nights"> 11–12 nights</label>
+          <label><input type="checkbox" name="length[]" value="13-14 nights"> 13–14 nights</label>
+          <label><input type="checkbox" name="length[]" value="15-16 nights"> 15–16 nights</label>
+          <label><input type="checkbox" name="length[]" value="17-18 nights"> 17–18 nights</label>
+          <label><input type="checkbox" name="length[]" value="19-20 nights"> 19–20 nights</label>
+          <label><input type="checkbox" name="length[]" value="21+ nights"> 21 nights or longer</label>
+        </div>
+      </div>
+      <div class="form-group">
+        <label>Total trip budget *</label>
+        <select name="budget" required>
+          <option value="">Select your budget</option>
+          <option>Under $1000</option>
+          <option>Under $2000</option>
+          <option>Under $3000</option>
+          <option>Under $4000</option>
+          <option>Under $5000</option>
+          <option>Under $10000</option>
+          <option>Under $15000</option>
+          <option>Under $20000</option>
+          <option>No limit</option>
+        </select>
+      </div>
+        <div class="form-group">
+            <label>What are your top 3 destinations? *</label>
+            <textarea name="destinations" rows="3" required placeholder="e.g. Paris, Bali, Tokyo"></textarea>   
+        </div>
+      <div class="form-group">
+        <label>What are your top 3 activities? *</label>
+        <textarea name="activities" rows="3" required placeholder="e.g. hiking, beach, cultural experiences"></textarea>
+        </div>
+        <div class="form-group">
+            <label>What are your top 3 hotel preferences? *</label>
+            <textarea name="hotels" rows="3" required placeholder="e.g. luxury, boutique, budget"></textarea>
+        </div>
+      <div class="form-group">
+        <label>What is your travel style? *</label>
+        <div class="radio-group">
+          <label><input type="radio" name="style" value="Luxury" required> Luxury</label>
+          <label><input type="radio" name="style" value="Mid-range"> Mid-range</label>
+          <label><input type="radio" name="style" value="Budget"> Budget</label>
+          <label><input type="radio" name="style" value="Adventure"> Adventure</label>
+          <label><input type="radio" name="style" value="Cultural"> Cultural</label>
+        </div>  
+        </div>
+        <div class="form-group">
+            <label>What is your preferred mode of transportation? *</label>
+            <select name="transportation" required>
+                <option value="">Select</option>
+                <option>Car rental</option>
+                <option>Public transport</option>
+                <option>Private driver</option>
+                <option>Walking</option>
+                <option>Biking</option>
+            </select>
+        </div>
+      <div class="form-group">
+        <label>What is your preferred accommodation type? *</label>
+        <select name="accommodation" required>
+          <option value="">Select</option>
+          <option>Hotel</option>
+          <option>Hostel</option>
+          <option>Airbnb</option>
+          <option>Resort</option>
+          <option>Camping</option>
+        </select>       
+        </div>
+        <div class="form-group">
+            <label>What is your preferred meal type? *</label>
+            <select name="meal" required>
+                <option value="">Select</option>
+                <option>Breakfast only</option>
+                <option>Half board</option>
+                <option>Full board</option>
+                <option>All-inclusive</option>
+                <option>No preference</option>
+            </select>
+        </div>
+      <div class="form-group">
+        <label for="text">Additional Comments</label>
+        <textarea name="comments" rows="4" placeholder="Any additional information or requests"></textarea>
+      </div>
+
+</body>
+</html>
