@@ -21,80 +21,27 @@
     />
   </head>
   <body>
-    <header class="text-gray-600 body-font">
-      <div
-        class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center"
-      >
-        <a
-          class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0"
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            stroke="currentColor"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
-            class="w-10 h-10 text-white p-2 bg-indigo-500 rounded-full"
-            viewBox="0 0 24 24"
-          >
-            <path
-              d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"
-            ></path>
-          </svg>
-          <span class="ml-3 text-xl">Tailblocks</span>
-        </a>
-        <nav
-          class="md:ml-auto md:mr-auto flex flex-wrap items-center text-base justify-center"
-        >
-          <a href="index.html" class="mr-5 hover:text-gray-900">Home</a>
-          <a href="Destination.html" class="mr-5 hover:text-gray-900"
-            >Destinations</a
-          >
-          <a href="Booking.html" class="mr-5 hover:text-gray-900">Booking</a>
-          <a href="About.html" class="mr-5 hover:text-gray-900">About Us</a>
-          <a href="Travel-tips.html" class="mr-5 hover:text-gray-900"
-            >Travel Tips</a
-          >
-        </nav>
-        <button
-          class="inline-flex items-center bg-pink-500 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0"
-          style="text-align: center; font-weight: bold"
-        >
-          <a href="Booking.html">BOOK NOW</a>
-          <svg
-            fill="none"
-            stroke="currentColor"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
-            class="w-4 h-4 ml-1"
-            viewBox="0 0 24 24"
-          >
-            <path d="M5 12h14M12 5l7 7-7 7"></path>
-          </svg>
-        </button>
-      </div>
-      <div style="align-items: center">
-        <form class="search-form" action="" style="background-color: darkcyan">
-          <input
-            type="search"
-            name="query"
-            placeholder="Travels, sight seeing..."
-            required
-            style="
-              border: 1px solid black;
-              width: 400px;
-              height: 40px;
-              margin-left: 400px;
-            "
-          />
-          <button type="submit" style="padding: 0%; background-color: grey">
-            <b>SEARCH</b>
-          </button>
-        </form>
-      </div>
-    </header>
+     <header class="text-green-900 body-font">
+    <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+      <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
+        <img src="logo.png" alt="logo" class="w-40 h-auto">
+      </a>
+      <nav class="md:ml-auto md:mr-auto flex flex-wrap items-center text-base justify-center space-x-5">
+        <a href="index.html" class="hover:text-gray-900">Home</a>
+        <a href="Destination.html" class="hover:text-gray-900">Destinations</a>
+        <a href="Booking.html" class="hover:text-gray-900">Booking</a>
+        <a href="About.html" class="hover:text-gray-900">About Us</a>
+        <a href="Travel-tips.html" class="hover:text-gray-900">Travel Tips</a>
+      </nav>
+      <a href="Booking.html" class="inline-flex items-center bg-green-900 hover:bg-green-700 text-white font-bold py-2 px-4 rounded shadow transition duration-200 ease-in-out">
+        BOOK NOW
+        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+             stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
+          <path d="M5 12h14M12 5l7 7-7 7"></path>
+        </svg>
+      </a>
+    </div>
+  </header>
     <h1
       style="
         text-align: center;
@@ -844,11 +791,62 @@
         </div>
       </div>
     </section>
-    <div class="container px-0 py-6 mx-auto flex items-center sm:flex-row flex-col bg-gray-300" style="margin-bottom: 0%;">
+     <footer class="text-gray-600 body-font">
+  <div class="container px-5 py-24 mx-auto">
+    <div class="flex flex-wrap md:text-left text-center order-first">
+      <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+        <img src="logo.png" alt="logo" style="width: 400px; margin-left: 0%; padding-left: 0%;">
+      </div>
+      <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+        <h2 class="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">USEFUL INFORMATION</h2>
+        <nav class="list-none mb-10">
+          <li>
+            <a href="About.html" class="text-gray-600 hover:text-gray-800">About Us</a>
+          </li>
+          <li>
+            <a href="Booking.html" class="text-gray-600 hover:text-gray-800">Booking Conditions</a>
+          </li>
+          <li>
+            <a href="About.html" class="text-gray-600 hover:text-gray-800">Our Team</a>
+          </li>
+          <li>
+            <a class="text-gray-600 hover:text-gray-800">Careers</a>
+          </li>
+        </nav>
+      </div>
+      <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+        <h2 class="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">POPULAR DESTINATIONS</h2>
+        <nav class="list-none mb-10">
+          <li>
+            <a href="Destination.html" class="text-gray-600 hover:text-gray-800">Africa</a>
+          </li>
+          <li>
+            <a href="Destination.html" class="text-gray-600 hover:text-gray-800">Argentina</a>
+          </li>
+          <li>
+            <a href="Destination.html" class="text-gray-600 hover:text-gray-800">Italy</a>
+          </li>
+          <li>
+            <a href="Destination.html" class="text-gray-600 hover:text-gray-800">Kenya</a>
+          </li>
+        </nav>
+      </div>
+      <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+         <h2 class="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">SUBSCRIBE FOR EMAIL UPDATES</h2>
+      <form class="flex flex-wrap sm:flex-nowrap items-center">
+        <input type="email" placeholder="Enter your email" aria-label="Email" required class="w-full sm:w-auto bg-white rounded border border-gray-300 focus:ring-2 focus:ring-green-400 focus:outline-none text-base px-2 py-2 mr-2 mb-2 sm:mb-0">
+        <button type="submit" class="bg-green-900 text-white border-0 py-2 px-2 rounded hover:bg-green-700 transition-all">Subscribe</button>
+      </form>
+      <p class="text-sm text-gray-500 mt-2">Subscribe to receive exclusive travel tips and offers.</p>
+    </div>
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="bg-gray-100">
+    <div class="container px-5 py-6 mx-auto flex items-center sm:flex-row flex-col">
       <a class="flex title-font font-medium items-center md:justify-start justify-center text-gray-900">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-10 h-10 text-white p-2 bg-indigo-500 rounded-full" viewBox="0 0 24 24">
-          <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
-        </svg>
+        
         <span class="ml-3 text-xl">Terra Trails</span>
       </a>
       <p class="text-sm text-gray-500 sm:ml-6 sm:mt-0 mt-4">© 2020 TerraTrails —
@@ -879,5 +877,7 @@
         </a>
       </span>
     </div>
+  </div>
+</footer>
   </body>
 </html>

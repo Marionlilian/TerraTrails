@@ -2,66 +2,24 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>CSS Tabs Fixed</title>
+  <title>CSS Tabs Responsive</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Playwrite+VN+Guides&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
   <style>
-       a{
-           
-           gap: 20px;
-        }
-         a:hover{
-                color: brown;
-            }
-    a:active{
-        text-decoration: underline;
-        font-weight: bold;
-    }
-    body {
-      font-family: sans-serif;
-      padding: 2rem;
-    }
+    a:hover { color: brown; }
+    a:active { text-decoration: underline; font-weight: bold; }
 
-    .tabs {
-      display: flex;
-      flex-direction: column;
-      max-width: 100%;
-      margin: auto;
-    }
-
-    .tab-labels {
-      display: flex;
-      gap: 1rem;
-    }
-
-    .tab-labels label {
-      padding: 0.5rem 1rem;
-      background: none;
-      cursor: pointer;
-      border-radius: 5px 5px 0 0;
-    }
-
-    .tab-content {
-      border: 1px solid #CBD5E1;
-      padding: 1rem;
-      display: none;
-      border-radius: 0 0 5px 5px;
-    }
-
-    input[name="tab"] {
-      display: none;
-    }
-
+    .tabs input[name="tab"] { display: none; }
+    .tab-content { display: none; }
     #tab1:checked ~ .content #content1,
     #tab2:checked ~ .content #content2,
     #tab3:checked ~ .content #content3,
-     #tab4:checked ~ .content #content4 {
+    #tab4:checked ~ .content #content4 {
       display: block;
     }
-
     #tab1:checked ~ .labels label[for="tab1"],
     #tab2:checked ~ .labels label[for="tab2"],
     #tab3:checked ~ .labels label[for="tab3"],
@@ -70,268 +28,225 @@
       color: white;
     }
   </style>
-</head>   
-<body>
-    <header class="text-green-900 body-font px-0 mx-0">
-  <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center px-0 mx-0">
-    <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
-     <img src="logo.png" alt="logo" style="width: 200px; height: auto;">
-    </a>
-    <nav class="md:ml-auto md:mr-auto flex flex-wrap items-center text-base justify-center">
-      <a href="index.html"class="mr-5 hover:text-gray-900">Home</a>
-      <a href="Destination.html" class="mr-5 hover:text-gray-900">Destinations</a>
-      <a href="Booking.html" class="mr-5 hover:text-gray-900">Booking</a>
-      <a href="About.html" class="mr-5 hover:text-gray-900">About Us</a>
-      <a href="Travel-tips.html" class="mr-5 hover:text-gray-900">Travel Tips</a>
-    </nav>
-   <a href="Booking.html" class="inline-flex items-center bg-green-900 hover:bg-green-700 text-white font-bold py-2 px-4 rounded shadow transition duration-200 ease-in-out">
-  BOOK NOW
-  <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-       stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
-    <path d="M5 12h14M12 5l7 7-7 7"></path>
-  </svg>
-</a>
-  </div>
-</header>
-<h1 style="text-align: center;font-weight: bold;font-size: 30px;">EXPLORE YOUR NEXT DESTINATION BY CATEGORY</h1>
-   <div class="tabs" style="max-width: 1200px; margin: 0 auto;">
-  
+</head>
+<body class="font-sans">
+
+  <!-- Header -->
+  <header class="text-green-900 body-font">
+    <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+      <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
+        <img src="logo.png" alt="logo" class="w-40 h-auto">
+      </a>
+      <nav class="md:ml-auto md:mr-auto flex flex-wrap items-center text-base justify-center space-x-5">
+        <a href="index.html" class="hover:text-gray-900">Home</a>
+        <a href="Destination.html" class="hover:text-gray-900">Destinations</a>
+        <a href="Booking.html" class="hover:text-gray-900">Booking</a>
+        <a href="About.html" class="hover:text-gray-900">About Us</a>
+        <a href="Travel-tips.html" class="hover:text-gray-900">Travel Tips</a>
+      </nav>
+      <a href="Booking.html" class="inline-flex items-center bg-green-900 hover:bg-green-700 text-white font-bold py-2 px-4 rounded shadow transition duration-200 ease-in-out">
+        BOOK NOW
+        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+             stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
+          <path d="M5 12h14M12 5l7 7-7 7"></path>
+        </svg>
+      </a>
+    </div>
+  </header>
+
+  <!-- Page Title -->
+  <h1 class="text-center font-bold text-2xl sm:text-3xl mt-6">
+    EXPLORE YOUR NEXT DESTINATION BY CATEGORY
+  </h1>
+
+  <!-- Tabs -->
+  <div class="tabs max-w-6xl mx-auto mt-6">
     <input type="radio" id="tab1" name="tab" checked>
     <input type="radio" id="tab2" name="tab">
     <input type="radio" id="tab3" name="tab">
     <input type="radio" id="tab4" name="tab">
 
-  
-    <div class="labels tab-labels">
-      <label for="tab1">BY TRAVELLER</label>
-      <label for="tab2">MOST POPULAR</label>
-      <label for="tab3">BY MONTH</label>
-      <label for="tab4">IN THE SPOTLIGHT</label>
+    <div class="labels flex flex-wrap gap-4 mb-4">
+      <label for="tab1" class="cursor-pointer px-4 py-2 rounded-t">BY TRAVELLER</label>
+      <label for="tab2" class="cursor-pointer px-4 py-2 rounded-t">MOST POPULAR</label>
+      <label for="tab3" class="cursor-pointer px-4 py-2 rounded-t">BY MONTH</label>
+      <label for="tab4" class="cursor-pointer px-4 py-2 rounded-t">IN THE SPOTLIGHT</label>
     </div>
-       
 
     <div class="content">
-      <div id="content1" class="tab-content">
-        <p>This is content for Tab One.</p>
-        <!-- Your full content from Tab One goes here -->
-         <div class="groups">
-    <div class="flex flex-wrap -m-4"style="padding-top: 0%;">
-      <div class="p-4 md:w-1/4">
-        <div class="flex rounded-lg h-full bg-gray-100 p-8 flex-col">
-          <div class="flex items-center mb-3">
-         <h1 style="text-align: center; font-weight: bold; position: absolute;transform: translate(-50%,-50%); margin-left: 100px; text-shadow: 2px 2px 5px black; color: white;">FAMILY</h1>
+      <!-- Tab 1: By Traveller -->
+      <div id="content1" class="tab-content border rounded-b p-6">
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
 
-          <img src="Family.jpg" alt="family">
-            <!-- <h2 class="text-gray-900 text-lg title-font font-medium"></h2> -->
+          <!-- Family -->
+          <div class="bg-gray-100 rounded-lg overflow-hidden shadow">
+            <div class="relative">
+              <img src="Family.jpg" alt="family" class="w-full h-64 sm:h-80 object-cover">
+              <h1 class="absolute inset-0 flex items-center justify-center text-white font-bold text-xl sm:text-2xl drop-shadow-lg">FAMILY</h1>
+            </div>
+            <div class="p-4">
+              <p>Explore unforgettable family adventures with safe, fun, and budget-friendly trips designed for all ages!</p>
+              <a href="#" class="mt-3 inline-flex items-center text-indigo-500">Learn More
+                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                     stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
+                  <path d="M5 12h14M12 5l7 7-7 7"></path>
+                </svg>
+              </a>
+            </div>
           </div>
-         
-          <div class="flex-grow">
-            <p class="leading-relaxed text-base">Explore unforgettable family adventures with our tailored travel packages—safe, fun, and budget-friendly trips designed for all ages!</p>
-            <a class="mt-3 text-indigo-500 inline-flex items-center">Learn More
-              <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
-                <path d="M5 12h14M12 5l7 7-7 7"></path>
-              </svg>
-            </a>
+
+          <!-- Couples -->
+          <div class="bg-gray-100 rounded-lg overflow-hidden shadow">
+            <div class="relative">
+              <img src="Couple.jpg" alt="couples" class="w-full h-64 sm:h-80 object-cover">
+              <h1 class="absolute inset-0 flex items-center justify-center text-white font-bold text-xl sm:text-2xl drop-shadow-lg">COUPLES</h1>
+            </div>
+            <div class="p-4">
+              <p>Discover the most romantic getaways, from beach escapes to city adventures, designed for two.</p>
+              <a href="#" class="mt-3 inline-flex items-center text-indigo-500">Learn More
+                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                     stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
+                  <path d="M5 12h14M12 5l7 7-7 7"></path>
+                </svg>
+              </a>
+            </div>
           </div>
+
+          <!-- Groups -->
+          <div class="bg-gray-100 rounded-lg overflow-hidden shadow">
+            <div class="relative">
+              <img src="Group.jpg" alt="groups" class="w-full h-64 sm:h-80 object-cover">
+              <h1 class="absolute inset-0 flex items-center justify-center text-white font-bold text-xl sm:text-2xl drop-shadow-lg">GROUPS</h1>
+            </div>
+            <div class="p-4">
+              <p>Travel with your squad! Find group-friendly destinations with fun activities and shared adventures.</p>
+              <a href="#" class="mt-3 inline-flex items-center text-indigo-500">Learn More
+                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                     stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
+                  <path d="M5 12h14M12 5l7 7-7 7"></path>
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Solo -->
+          <div class="bg-gray-100 rounded-lg overflow-hidden shadow">
+            <div class="relative">
+              <img src="solo.jpg" alt="solo traveler" class="w-full h-64 sm:h-80 object-cover">
+              <h1 class="absolute inset-0 flex items-center justify-center text-white font-bold text-xl sm:text-2xl drop-shadow-lg">SOLO</h1>
+            </div>
+            <div class="p-4">
+              <p>Experience the freedom of solo travel with safe, exciting, and enriching destinations tailored for you.</p>
+              <a href="#" class="mt-3 inline-flex items-center text-indigo-500">Learn More
+                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                     stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
+                  <path d="M5 12h14M12 5l7 7-7 7"></path>
+                </svg>
+              </a>
+            </div>
+          </div>
+
         </div>
       </div>
-      <div class="p-4 md:w-1/4">
-        <div class="flex rounded-lg h-full bg-gray-100 p-8 flex-col">
-          <div class="flex items-center mb-3">
-            <h1 style="text-align: center; font-weight: bold; position: absolute;transform: translate(-50%,-50%); margin-left: 100px; text-shadow: 2px 2px 5px black; color: white;">COUPLES</h1>
 
-          <img src="giraffe.jpg" alt="couples" style="height:325px">
+      <!-- Tab 2: Most Popular -->
+      <div id="content2" class="tab-content border rounded-b p-6">
+        <h1 class="text-center font-bold text-xl mb-6">MOST POPULAR</h1>
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+          <div class="relative">
+            <img src="Southafrica.png" alt="South Africa" class="w-full h-64 sm:h-80 object-cover rounded-lg">
           </div>
-          <div class="flex-grow">
-            <p class="leading-relaxed text-base">Escape together with our romantic getaways—handpicked destinations perfect for couples seeking adventure, relaxation, and unforgettable memories. Reconnect and explore love!</p>
-            <a class="mt-3 text-indigo-500 inline-flex items-center">Learn More
-              <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
-                <path d="M5 12h14M12 5l7 7-7 7"></path>
-              </svg>
-            </a>
+          <div class="relative">
+            <img src="Madagascar.jpg" alt="Madagascar" class="w-full h-64 sm:h-80 object-cover rounded-lg">
+            <h1 class="absolute inset-0 flex items-center justify-center text-white font-bold text-2xl drop-shadow-lg">MADAGASCAR</h1>
           </div>
+          <div class="relative">
+            <img src="Kenya.png" alt="Kenya" class="w-full h-64 sm:h-80 object-cover rounded-lg">
+            <h1 class="absolute inset-0 flex items-center justify-center text-white font-bold text-2xl drop-shadow-lg">KENYA</h1>
+          </div>
+          <!-- Add Norway, Italy, Dubai -->
         </div>
       </div>
-      <div class="p-4 md:w-1/4">
-        <div class="flex rounded-lg h-full bg-gray-100 p-8 flex-col">
-          <div class="flex items-center mb-3">
-            <h1 style="text-align: center; font-weight: bold; position: absolute;transform: translate(-50%,-50%); margin-left: 100px; text-shadow: 2px 2px 5px black; color: white;">GROUPS</h1>
 
-          <img src="roadtrip.jpg" alt="roadtrip" style="height: 325px;">
+      <!-- Tab 3: By Month -->
+      <div id="content3" class="tab-content border rounded-b p-6">
+        <h1 class="text-center font-bold text-xl mb-6">MONTH</h1>
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+          <div class="relative">
+            <img src="January.png" alt="January" class="w-full h-64 sm:h-80 object-cover rounded-lg">
+            <h1 class="absolute inset-0 flex items-center justify-center text-white font-bold text-2xl drop-shadow-lg">JANUARY</h1>
           </div>
-          <div class="flex-grow">
-            <p class="leading-relaxed text-base">
-                   Travel better together! Our group packages offer exciting destinations, shared adventures, and unbeatable rates—perfect for friends, families, or corporate teams!</p>
-            <a class="mt-3 text-indigo-500 inline-flex items-center">Learn More
-              <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
-                <path d="M5 12h14M12 5l7 7-7 7"></path>
-              </svg>
-            </a>
+          <div class="relative">
+            <img src="February.png" alt="February" class="w-full h-64 sm:h-80 object-cover rounded-lg">
+            <h1 class="absolute inset-0 flex items-center justify-center text-white font-bold text-2xl drop-shadow-lg">FEBRUARY</h1>
           </div>
-        </div>
-      </div>
-       <div class="p-4 md:w-1/4">
-        <div class="flex rounded-lg h-full bg-gray-100 p-8 flex-col">
-          <div class="flex items-center mb-3">
-         <h1 style="text-align: center; font-weight: bold; position: absolute;transform: translate(-50%,-50%); margin-left: 100px; text-shadow: 2px 2px 5px black; color: white;">SOLO</h1>
-
-          <img src="solotrip.jpg" alt="SOLO" style="height: 325px;">
-            <!-- <h2 class="text-gray-900 text-lg title-font font-medium"></h2> -->
+          <div class="relative">
+            <img src="March.png" alt="March" class="w-full h-64 sm:h-80 object-cover rounded-lg">
+            <h1 class="absolute inset-0 flex items-center justify-center text-white font-bold text-2xl drop-shadow-lg">MARCH</h1>
           </div>
-          <div class="flex-grow">
-            <p class="leading-relaxed text-base">Discover the world on your own terms! Our solo travel packages offer freedom, safety, and unforgettable experiences tailored just for you.</p>
-            <a class="mt-3 text-indigo-500 inline-flex items-center">Learn More
-              <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
-                <path d="M5 12h14M12 5l7 7-7 7"></path>
-              </svg>
-            </a>
-          </div>
+          <!-- Add April, May, June -->
         </div>
       </div>
     </div>
   </div>
-</div>
 
-      <div id="content2" class="tab-content">
-        <p>This is content for Tab Two.</p>
-        <!-- Your full content from Tab Two goes here -->
-         <div class="content-popular">
-    <h1 style="text-align: center; font-weight: bold;">MOST POPULAR</h1><br>
-    <div class="flex flex-wrap -m-4">
-      <div class="p-4 md:w-1/3">
-        <div class="flex rounded-lg h-128 bg-gray-100 p-8 flex-col">
-          <div class="flex items-center mb-3">
-         <!-- <h1 style="text-align: center; font-weight: bold; position: absolute;transform: translate(-50%,-50%); margin-left: 100px; text-shadow: 2px 2px 5px black; color: white;">FAMILY</h1> -->
-
-          <img src="Southafrica.png" alt="South Africa" style="height: 435px;">
-            <!-- <h2 class="text-gray-900 text-lg title-font font-medium"></h2> -->
-          </div>
-        </div>
+  <!-- Footer -->
+  <footer class="text-gray-600 body-font">
+  <div class="container px-5 py-24 mx-auto">
+    <div class="flex flex-wrap md:text-left text-center order-first">
+      <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+        <img src="logo.png" alt="logo" style="width: 400px; margin-left: 0%; padding-left: 0%;">
       </div>
-      <div class="p-4 md:w-1/3">
-        <div class="flex rounded-lg h-128 bg-gray-100 p-8 flex-col">
-          <div class="flex items-center mb-3">
-            <h1 style="text-align: center; font-weight: bold; position: absolute;transform: translate(-50%,-50%); margin-left: 170px; text-shadow: 2px 2px 5px black; color: white; font-size: 30px;">MADAGASCAR</h1>
-
-          <img src="Madagascar.jpg" alt="Madagascar">
-          </div>
-        </div>
+      <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+        <h2 class="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">USEFUL INFORMATION</h2>
+        <nav class="list-none mb-10">
+          <li>
+            <a href="About.html" class="text-gray-600 hover:text-gray-800">About Us</a>
+          </li>
+          <li>
+            <a href="Booking.html" class="text-gray-600 hover:text-gray-800">Booking Conditions</a>
+          </li>
+          <li>
+            <a href="About.html" class="text-gray-600 hover:text-gray-800">Our Team</a>
+          </li>
+          <li>
+            <a class="text-gray-600 hover:text-gray-800">Careers</a>
+          </li>
+        </nav>
       </div>
-      <div class="p-4 md:w-1/3">
-        <div class="flex rounded-lg h-full bg-gray-100 p-8 flex-col">
-          <div class="flex items-center mb-3">
-            <h1 style="text-align: center; font-weight: bold; position: absolute;transform: translate(-50%,-50%); margin-left: 170px; text-shadow: 2px 2px 5px black; color: white; font-size: 30px; ">KENYA</h1>
-
-          <img src="Kenya.png" alt="Kenya" style="height: 400px;">
-          </div>
-        </div>
+      <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+        <h2 class="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">POPULAR DESTINATIONS</h2>
+        <nav class="list-none mb-10">
+          <li>
+            <a href="Destination.html" class="text-gray-600 hover:text-gray-800">Africa</a>
+          </li>
+          <li>
+            <a href="Destination.html" class="text-gray-600 hover:text-gray-800">Argentina</a>
+          </li>
+          <li>
+            <a href="Destination.html" class="text-gray-600 hover:text-gray-800">Italy</a>
+          </li>
+          <li>
+            <a href="Destination.html" class="text-gray-600 hover:text-gray-800">Kenya</a>
+          </li>
+        </nav>
       </div>
-       <div class="p-4 md:w-1/3">
-        <div class="flex rounded-lg h-full bg-gray-100 p-8 flex-col">
-          <div class="flex items-center mb-3">
-         <!-- <h1 style="text-align: center; font-weight: bold; position: absolute;transform: translate(-50%,-50%); margin-left: 100px; text-shadow: 2px 2px 5px black; color: white;">SOLO</h1> -->
-
-          <img src="Norway.png" alt="Norway" style="height: 450px;">
-            <!-- <h2 class="text-gray-900 text-lg title-font font-medium"></h2> -->
-          </div>
-        </div>
-      </div>
-       <div class="p-4 md:w-1/3">
-        <div class="flex rounded-lg h-full bg-gray-100 p-8 flex-col">
-          <div class="flex items-center mb-3">
-         <!-- <h1 style="text-align: center; font-weight: bold; position: absolute;transform: translate(-50%,-50%); margin-left: 100px; text-shadow: 2px 2px 5px black; color: white;">SOLO</h1> -->
-
-          <img src="Italy.png" alt="Italy" style="height: 450px;">
-            <!-- <h2 class="text-gray-900 text-lg title-font font-medium"></h2> -->
-          </div>
-        </div>
-      </div>
-       <div class="p-4 md:w-1/3">
-        <div class="flex rounded-lg h-full bg-gray-100 p-8 flex-col">
-          <div class="flex items-center mb-3">
-         <!-- <h1 style="text-align: center; font-weight: bold; position: absolute;transform: translate(-50%,-50%); margin-left: 100px; text-shadow: 2px 2px 5px black; color: white;">SOLO</h1> -->
-
-          <img src="Dubai.png" alt="Dubai" style="height: 450px;">
-            <!-- <h2 class="text-gray-900 text-lg title-font font-medium"></h2> -->
-          </div>
-        </div>
-      </div>
+      <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+         <h2 class="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">SUBSCRIBE FOR EMAIL UPDATES</h2>
+      <form class="flex flex-wrap sm:flex-nowrap items-center">
+        <input type="email" placeholder="Enter your email" aria-label="Email" required class="w-full sm:w-auto bg-white rounded border border-gray-300 focus:ring-2 focus:ring-green-400 focus:outline-none text-base px-2 py-2 mr-2 mb-2 sm:mb-0">
+        <button type="submit" class="bg-green-900 text-white border-0 py-2 px-2 rounded hover:bg-green-700 transition-all">Subscribe</button>
+      </form>
+      <p class="text-sm text-gray-500 mt-2">Subscribe to receive exclusive travel tips and offers.</p>
     </div>
-    </div>
-      </div>
-
-      <div id="content3" class="tab-content">
-        <p>This is content for Tab Three.</p>
-        <!-- Your full content from Tab Three goes here -->
-         <h1 style="text-align: center; font-weight: bold;">MONTH</h1><br>
-    <div class="flex flex-wrap -m-4">
-      <div class="p-4 md:w-1/3">
-        <div class="flex rounded-lg h-auto bg-gray-100 p-8 flex-col">
-          <div class="flex items-center mb-3">
-         <h1 style="text-align: center; font-weight: bold; position: absolute;transform: translate(-50%,-50%); margin-left: 170px; text-shadow: 2px 2px 5px black; color: white; font-size: 30px;">JANUARY</h1>
-
-          <img src="January.png" alt="January" style="height: 435px;">
-            <!-- <h2 class="text-gray-900 text-lg title-font font-medium"></h2> -->
-          </div>
-        </div>
-      </div>
-      <div class="p-4 md:w-1/3">
-        <div class="flex rounded-lg h-128 bg-gray-100 p-8 flex-col">
-          <div class="flex items-center mb-3">
-            <h1 style="text-align: center; font-weight: bold; position: absolute;transform: translate(-50%,-50%); margin-left: 170px; text-shadow: 2px 2px 5px black; color: white; font-size: 30px;">FEBRUARY</h1>
-
-          <img src="February.png" alt="February">
-          </div>
-        </div>
-      </div>
-      <div class="p-4 md:w-1/3">
-        <div class="flex rounded-lg h-full bg-gray-100 p-8 flex-col">
-          <div class="flex items-center mb-3">
-            <h1 style="text-align: center; font-weight: bold; position: absolute;transform: translate(-50%,-50%); margin-left: 170px; text-shadow: 2px 2px 5px black; color: white; font-size: 30px; ">MARCH</h1>
-
-          <img src="March.png" alt="MARCH" style="height: 450px; width: 400px;">
-          </div>
-        </div>
-      </div>
-       <div class="p-4 md:w-1/3">
-        <div class="flex rounded-lg h-full bg-gray-100 p-8 flex-col">
-          <div class="flex items-center mb-3">
-         <h1 style="text-align: center; font-weight: bold; position: absolute;transform: translate(-50%,-50%); margin-left: 170px; text-shadow: 2px 2px 5px black; color: white; font-size: 30px;">APRIL</h1>
-
-          <img src="April.png" alt="APRIL" style="height: 450px;">
-            <!-- <h2 class="text-gray-900 text-lg title-font font-medium"></h2> -->
-          </div>
-        </div>
-      </div>
-       <div class="p-4 md:w-1/3">
-        <div class="flex rounded-lg h-full bg-gray-100 p-8 flex-col">
-          <div class="flex items-center mb-3">
-         <h1 style="text-align: center; font-weight: bold; position: absolute;transform: translate(-50%,-50%); margin-left: 170px; text-shadow: 2px 2px 5px black; color: white; font-size: 30px;">MAY</h1>
-
-          <img src="May.png" alt="MAY">
-            <!-- <h2 class="text-gray-900 text-lg title-font font-medium"></h2> -->
-          </div>
-        </div>
-      </div>
-       <div class="p-4 md:w-1/3">
-        <div class="flex rounded-lg h-full bg-gray-100 p-8 flex-col">
-          <div class="flex items-center mb-3">
-         <h1 style="text-align: center; font-weight: bold; position: absolute;transform: translate(-50%,-50%); margin-left: 170px; text-shadow: 2px 2px 5px black; color: white; font-size: 30px;">JUNE</h1>
-
-          <img src="June.png" alt="JUNE" style="height: 500px; width: 400px;">
-            <!-- <h2 class="text-gray-900 text-lg title-font font-medium"></h2> -->
-          </div>
-        </div>
-      </div>
-    </div>
+        </p>
       </div>
     </div>
   </div>
-   <div class="container px-0 py-6 mx-auto flex items-center sm:flex-row flex-col bg-gray-300" style="margin-bottom: 0%;">
+  <div class="bg-gray-100">
+    <div class="container px-5 py-6 mx-auto flex items-center sm:flex-row flex-col">
       <a class="flex title-font font-medium items-center md:justify-start justify-center text-gray-900">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-10 h-10 text-white p-2 bg-indigo-500 rounded-full" viewBox="0 0 24 24">
-          <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
-        </svg>
+        
         <span class="ml-3 text-xl">Terra Trails</span>
       </a>
       <p class="text-sm text-gray-500 sm:ml-6 sm:mt-0 mt-4">© 2020 TerraTrails —
@@ -363,5 +278,7 @@
       </span>
     </div>
   </div>
+</footer>
+
 </body>
 </html>

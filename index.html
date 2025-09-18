@@ -92,53 +92,42 @@
   </div>
  
 </header>
-    <section
-      class="bg-black text-white body-font h-[600px] relative h-screen w-full overflow-hidden"
-    >
-      <div class="container px-5 py-24 mx-auto flex flex-wrap">
-        <video
-          autoplay
-          muted
-          loop
-          playsinline
-          class="absolute top-0 left-0 w-full h-200px object-cover z-0"
-        >
-          <source src="homepage.mp4" type="video/mp4" />
-        </video>
-        <div class="content" style="margin-top: 200px">
-             
-          <h1 style="text-align: center; font-size: xx-large">
-            THE TERRATRAIL EXPERIENCE
-          </h1>
-          <br />
-          <!-- <img src="divider-3 (1).png" alt="divider1" style="align-items: center; margin-left: 200px;">  -->
-          <p style="text-align: center">
-           Second only to the breathtaking destinations is the experience with Terra Trails. <br>
-Based in the heart of adventure, we craft unforgettable journeys through nature’s most stunning landscapes. From hidden paths to cultural gems, our expertly curated tours promise more than just travel — they promise transformation.
-          </p>
-          <br /><br />
-          <a href="Destination.html">
-          <button
-            style="
-              width: 200px;
-              height: 40px;
-              border: 2px solid white;
-              align-items: center;
-              margin-left: 400px;
-            "
-          >
-            Explore
-          </button>
-          </a> <br><br><br><br>
-            <div style="align-items: center; ">
-    <form class="search-form" action="" style="background-color: ;">
-    <input type="search" name="query" placeholder="Travels, sight seeing..." required style="border: 1px solid black; width: 400px; height: 40px;margin-left: 200px;">
-    <button type="submit" style="padding: 0%; background-color:darkgreen; width: 100px; height: 35px;"><b>SEARCH</b> </button>
-  </form>
+    <section class="relative w-full h-screen text-white">
+  <!-- Background Video -->
+  <video autoplay muted loop playsinline
+    class="absolute inset-0 w-full h-full object-cover z-0">
+    <source src="homepage.mp4" type="video/mp4" />
+  </video>
+
+  <!-- Overlay -->
+  <div class="absolute inset-0 bg-black bg-opacity-50 z-10"></div>
+
+  <!-- Content -->
+  <div class="relative z-20 flex flex-col items-center justify-center h-full px-4 text-center">
+    <h1 class="text-3xl sm:text-5xl font-bold mb-4">THE TERRATRAIL EXPERIENCE</h1>
+    <p class="max-w-2xl text-base sm:text-lg leading-relaxed mb-6">
+      Second only to the breathtaking destinations is the experience with Terra Trails.
+      Based in the heart of adventure, we craft unforgettable journeys...
+    </p>
+
+    <a href="Destination.html">
+      <button class="border-2 border-white px-6 py-2 rounded hover:bg-white hover:text-black transition">
+        Explore
+      </button>
+    </a>
+
+    <!-- Search Bar -->
+    <form class="flex flex-col sm:flex-row mt-6 w-full max-w-md">
+      <input type="search" name="query" placeholder="Travels, sight seeing..."
+        class="flex-grow px-4 py-2 border border-gray-300 rounded sm:rounded-r-none focus:outline-none text-black" required>
+      <button type="submit"
+        class="bg-green-900 hover:bg-green-700 text-white px-4 py-2 rounded sm:rounded-l-none">
+        SEARCH
+      </button>
+    </form>
   </div>
-        </div>
-      </div>
-    </section>
+</section>
+
 
 
    <section class="text-gray-800 body-font bg-white px-6 py-16 max-w-5xl mx-auto text-center">
